@@ -4,8 +4,14 @@ import { useState, useEffect } from "react"
 
 
 
-function Button() {
+function ButtonDeux() {
     const [quantity, setQuantity] = useState(1);
+
+    function heynow() {
+        console.log('enter heynow');
+        console.log(quantity)
+        setQuantity(quantity + 1)
+    }
 
     // Similar to componentDidMount and componentDidUpdate:  
     useEffect(() => {    // Update the document title using the browser API    
@@ -13,9 +19,9 @@ function Button() {
     });
 
     return (
-        <button onClick={(e) => setQuantity(quantity + 1)}>{quantity}</button>
+        <button onClick={heynow()}>{quantity}</button>
     );
 }
 
-export default Button
+export default ButtonDeux
 
